@@ -14,9 +14,6 @@ module.exports = {
       userID: {
         type: Sequelize.STRING
       },
-      isVerified: {
-        type: Sequelize.STRING
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -118,8 +118,28 @@ const getCompanyList = async (req, res) => {
     }
 }
 
+const getAdminList = async (req, res) => {
+    try {
+        // get admin list from database
+        const adminList = await User.findAll({
+            where:{
+                type: "admin"
+            }
+        })
+        // return data to frontend if suceedd
+        res.status(200).send({
+            message: "Get admin list successfully!",
+            adminList
+        })
+    } catch (error) {
+        // return error to frontend if not suceedd
+        res.status(500).send(error)
+    }
+}
+
 module.exports = {
     signUp,
     logIn,
-    getCompanyList
+    getCompanyList,
+    getAdminList
 }

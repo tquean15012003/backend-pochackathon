@@ -16,7 +16,6 @@ module.exports = (sequelize, DataTypes) => {
   EducationUser.init({
     educationID: DataTypes.STRING,
     userID: DataTypes.STRING,
-    isVerified: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'EducationUser',

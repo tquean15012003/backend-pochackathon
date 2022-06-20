@@ -66,8 +66,8 @@ const getUserUserInfoDetailByUserID = async (req, res) => {
 const updateUserUserInfo = async (req, res) => {
     const { id } = req.params;
     const userUserInfo = {
-        userID,
-        userInfoID
+        userID: req.body.userID,
+        userInfoID: req.body.userInfoID
     };
     try {
         const updatedUserUserInfo = await UserUserInfo.findOne({
