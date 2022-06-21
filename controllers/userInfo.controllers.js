@@ -96,10 +96,31 @@ const deleteUserInfo = async (req, res) => {
     }
 }
 
+const updateClaimIDUserInfo = async (req, res) => {
+    const { id } = req.params;
+    const request = req.body
+    try {
+        const updatedUserInfo = await UserInfo.findOne({
+            where: {
+                id
+            }
+        });
+        updatedUserInfo.claimID = request.claimID;
+        await updatedUserInfo.save();
+        res.status(200).send({
+            message: "Update the User Info successfully",
+            userInfo: updatedUserInfo
+        });
+    } catch (error) {
+        res.status(500).send(error);
+    };
+}
+
 module.exports = {
     createUserInfo,
     getUserInfoList,
     getUserInfoDetail,
     updateUserInfo,
-    deleteUserInfo
+    deleteUserInfo,
+    updateClaimIDUserInfo
 }

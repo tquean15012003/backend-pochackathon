@@ -96,10 +96,31 @@ const deleteEducation = async (req, res) => {
     }
 }
 
+const updateClaimIDEducation = async (req, res) => {
+    const { id } = req.params;
+    const request = req.body
+    try {
+        const updatedEducation = await Education.findOne({
+            where: {
+                id
+            }
+        });
+        updatedEducation.claimID = request.claimID;
+        await updatedEducation.save();
+        res.status(200).send({
+            message: "Update the Education successfully",
+            education: updatedEducation
+        });
+    } catch (error) {
+        res.status(500).send(error);
+    };
+}
+
 module.exports = {
     createEducation,
     getEducationList,
     getEducationDetail,
     updateEducation,
-    deleteEducation
+    deleteEducation,
+    updateClaimIDEducation
 }
