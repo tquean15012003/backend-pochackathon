@@ -17,6 +17,9 @@ module.exports = {
       issuerID: {
         type: Sequelize.STRING
       },
+      identity: {
+        type: Sequelize.STRING
+      },
       data: {
         type: Sequelize.TEXT
       },

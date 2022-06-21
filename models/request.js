@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     requestType: DataTypes.STRING,
     holderID: DataTypes.STRING,
     issuerID: DataTypes.STRING,
+    identity: DataTypes.STRING,
     data: DataTypes.TEXT,
     link: DataTypes.TEXT,
     isdone: DataTypes.STRING,
