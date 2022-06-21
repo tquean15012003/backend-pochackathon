@@ -6,7 +6,7 @@ const createUserInfo = async (req, res) => {
         name,
         contact,
         location,
-        isVerified: "false",
+        claimID: "",
     }
     try {
         const newUserInfo = await UserInfo.create(userInfo);

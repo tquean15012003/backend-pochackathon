@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     period: DataTypes.STRING,
     company: DataTypes.STRING,
     description: DataTypes.STRING,
-    isVerified: DataTypes.STRING
+    claimID: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Experience',

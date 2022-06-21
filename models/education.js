@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     level: DataTypes.STRING,
     name: DataTypes.STRING,
     description: DataTypes.STRING,
-    isVerified: DataTypes.STRING
+    claimID: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Education',

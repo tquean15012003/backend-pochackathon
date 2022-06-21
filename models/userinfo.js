@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     contact: DataTypes.STRING,
     location: DataTypes.STRING,
-    isVerified: DataTypes.STRING
+    claimID: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'UserInfo',

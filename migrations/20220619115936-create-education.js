@@ -17,7 +17,7 @@ module.exports = {
       description: {
         type: Sequelize.STRING
       },
-      isVerified: {
+      claimID: {
         type: Sequelize.STRING
       },
       createdAt: {

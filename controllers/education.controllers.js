@@ -6,7 +6,7 @@ const createEducation = async (req, res) => {
         level,
         name,
         description,
-        isVerified: "false",
+        claimID: "",
     }
     try {
         const newEucation = await Education.create(education);
